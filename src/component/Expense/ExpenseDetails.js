@@ -1,5 +1,4 @@
 
-
 function ExpenseDetails(props) {
 
     return (

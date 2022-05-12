@@ -1,4 +1,5 @@
-import ExpenseItem from "./component/ExpenseItem";
+import React from "react";
+import ExpenseItem from "./component/Expense/ExpenseItem";
 
 function App() {
   const expenses = [
@@ -34,36 +35,20 @@ function App() {
 
   let expenselist = expenses.map((item) => {
     return (
-      <ExpenseItem
+      <>
+        <ExpenseItem
         date={item.date}
         title={item.title}
         amount={item.amount}
         location={item.locationOfExpenditure}
-      ></ExpenseItem>
-    );
+        ></ExpenseItem>
+        </>
+        );
   });
 
   return (
     <div>
       <h2>Let's get started!</h2>
-      {/* <ExpenseItem
-        date={expenses[0].date}
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        location={expenses[0].locationOfExpenditure}
-      ></ExpenseItem>
-      <ExpenseItem
-        date={expenses[1].date}
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        location={expenses[1].locationOfExpenditure}
-      ></ExpenseItem>
-      <ExpenseItem
-        date={expenses[2].date}
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        location={expenses[2].locationOfExpenditure}
-      ></ExpenseItem> */}
       {expenselist}
     </div>
   );
