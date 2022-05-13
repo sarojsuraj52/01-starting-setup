@@ -1,5 +1,6 @@
 import React from "react";
 import ExpenseItem from './component/Expense/ExpenseItem'
+import NewExpense from "./component/Expense/NewExpense/NewExpense";
 
 function App(props) {
   const expenses = [
@@ -46,7 +47,7 @@ let expenselist = expenses.map((item) => {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       {expenselist}
     </div>
   );
